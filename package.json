@@ -8,7 +8,12 @@
     "cy:run": "npx cypress run",
     "cy:dashboard": "npx cypress run --record --key 4197a37d-bf85-48b6-87e8-40d7dad0cdd9",
     "cy:test:staging": "npx cypress run --env ENV=staging",
-    "cy:dashboard:staging": "npx cypress run --record --key 4197a37d-bf85-48b6-87e8-40d7dad0cdd9 --env ENV=staging"
+    "cy:dashboard:staging": "npx cypress run --record --key 4197a37d-bf85-48b6-87e8-40d7dad0cdd9 --env ENV=staging",
+    "cy:staging:chrome": "npx cypress run --env ENV=staging --browser chrome",
+    "cy:staging:electron": "npx cypress run --env ENV=staging --browser electron",
+    "cy:staging:sequential": "npm run cy:staging:chrome && npm run cy:staging:electron",
+    "cy:dashboard:staging:sequential": "npx cypress run --record --key 4197a37d-bf85-48b6-87e8-40d7dad0cdd9 --env ENV=staging --browser chrome && npx cypress run --record --key 4197a37d-bf85-48b6-87e8-40d7dad0cdd9 --env ENV=staging --browser electron"
+
   },
   "repository": {
     "type": "git",
