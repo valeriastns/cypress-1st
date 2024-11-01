@@ -1,0 +1,11 @@
+{
+    "validUser": {
+      "username": "user123",
+      "email": "user1@test.com",
+      "password": "P@ssw0rd",
+      "passwordConfirmation": "P@ssw0rd"
+    },
+    "invalidUsernames": [" ", "user name", "Пользователь"],
+    "invalidEmails": ["user", "@user@test.com", "user@", "u@.c"],
+    "invalidPasswords": [" ", "123", "Pass", "sssssssssssssssssssssssssssssssssssssssssssssssssss"]
+  }
